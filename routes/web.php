@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('index');
+})->name("home.index");
+
+Route::get('/todolist', function () {
+    return view('todoapp.index');
+})->name('todoapp.index');
+
+Route::get('/contact', function () {
+    return view("contact.index");
+})->name("contact.index");
+
+Route::get('/blog', function () {
+    return view('blog.index');
+})->name("blog.index");
