@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\TodoAppController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,18 +18,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 })->name("home.index");
+//
+//Route::get('/todolist-app-main', function () {
+//    return view('todoapp.index');
+//})->name('todoapp.index');
 
-Route::get('/todolist', function () {
-    return view('todoapp.index');
-})->name('todoapp.index');
+Route::get('/todolist-app-main', [TodoAppController::class, 'index'])->name('todoapp.index');
 
 Route::get('/settings', function () {
     return view('todoapp.settings');
 })->name('todoapp.settings');
 
-Route::get('/contact', function () {
-    return view("contact.index");
-})->name("contact.index");
+Route::get('/contact', [ContactController::class, 'index'])->name("contact.index");
 
 Route::get('/blog', function () {
     return view('blog.index');
