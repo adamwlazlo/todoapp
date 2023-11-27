@@ -1,3 +1,8 @@
+@extends("layouts.app")
+@section("title", "Contact")
+
+@section("content")
+
 <h1>Contact us</h1>
 
 <form action="">
@@ -11,5 +16,4 @@
         <input type="submit">
     </div>
 </form>
-
-<a href="{{route("home.index")}}">Back</a>
+@endsection

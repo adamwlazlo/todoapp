@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@yield("title")</title>
+</head>
+<body>
+
+<nav>
+    <a href="{{route("home.index")}}">HOME</a>
+    <a href="{{route("todoapp.index")}}">TODO</a>
+    <a href="{{route("todoapp.settings")}}">SETTINGS</a>
+    <a href="{{route("blog.index")}}">BLOG</a>
+    <a href="{{route("contact.index")}}">CONTACT</a>
+</nav>
+
+<main>
+    @yield("content")
+</main>
+
+</body>
+</html>

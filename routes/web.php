@@ -21,6 +21,10 @@ Route::get('/todolist', function () {
     return view('todoapp.index');
 })->name('todoapp.index');
 
+Route::get('/settings', function () {
+    return view('todoapp.settings');
+})->name('todoapp.settings');
+
 Route::get('/contact', function () {
     return view("contact.index");
 })->name("contact.index");

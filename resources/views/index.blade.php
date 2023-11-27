@@ -1,3 +1,6 @@
-<a href="{{route("todoapp.index")}}">todo</a>
-<a href="{{route("blog.index")}}">blog</a>
-<a href="{{route("contact.index")}}">contact</a>
+@extends("layouts.app")
+@section("title", "HOME")
+
+@section("content")
+    <h2>Strona główna</h2>
+@endsection
