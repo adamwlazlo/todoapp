@@ -23,7 +23,8 @@ Route::get('/', function () {
 //    return view('todoapp.index');
 //})->name('todoapp.index');
 
-Route::get('/todolist-app-main', [TodoAppController::class, 'index'])->name('todoapp.index');
+Route::get('/todolist', [TodoAppController::class, 'index'])->name('todoapp.index');
+Route::post('/todolist', [TodoAppController::class, 'store'])->name('todoapp.store');
 
 Route::get('/settings', function () {
     return view('todoapp.settings');
