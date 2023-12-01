@@ -26,6 +26,11 @@ Route::get('/', function () {
 Route::get('/todolist', [TodoAppController::class, 'index'])->name('todoapp.index');
 Route::post('/todolist', [TodoAppController::class, 'store'])->name('todoapp.store');
 
+Route::delete('/todolist/{task}', [TodoAppController::class, 'destroy'])->name('todoapp.destroy');
+Route::put('/todolist/update/{task}', [TodoAppController::class, 'update'])->name('todoapp.update');
+Route::put('/todolist/complete/{task}', [TodoAppController::class, 'complete'])->name('todoapp.complete');
+
+
 Route::get('/settings', function () {
     return view('todoapp.settings');
 })->name('todoapp.settings');
