@@ -16,7 +16,7 @@
                     @csrf
                     @method("PUT")
 
-                    {{$task->id }} - <input type="text" name="content" id="" value="{{ $task->content}}">
+                    {{$task->id }} - <input type="text" name="content" value="{{ $task->content}}">
                     <button type="submit">Edit</button>
                 </form>
 
@@ -32,7 +32,7 @@
                 <form method="POST" action="{{route("todoapp.complete", $task->id)}}">
                     @csrf
                     @method("PUT")
-
+                    <input type="hidden" name="completed" value="1">
                     <button type="submit">Completed</button>
                 </form>
 
@@ -41,11 +41,14 @@
     </ul>
 
     <form method="POST">
-        @csrf
+{{--        @csrf--}}
         <div>
             <label for="todoitem">Do zrobienia</label><br>
-            <input type="text" placeholder="Enter todo item" name="content" id="content">
-            <input type="submit">
+            <input type="text" placeholder="Enter todo item" name="content">
+            <input type="submit" value="Dodaj">
+            @error("content")
+            <span style="color: red">{{ $message }}</span>
+            @enderror
         </div>
     </form>
 @endsection

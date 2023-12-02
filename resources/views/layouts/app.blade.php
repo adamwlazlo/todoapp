@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield("title")</title>
+{{--    <link rel="stylesheet" href="{{ asset(('css/style.css')) }}">--}}
+{{--    <script src="{{ asset('js/script.js') }}"></script>--}}
+
+    @vite('resources/css/app.css')
+    @vite('resources/js/app.js')
+
 </head>
 <body>
 
