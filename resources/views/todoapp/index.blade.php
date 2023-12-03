@@ -41,7 +41,7 @@
     </ul>
 
     <form method="POST">
-{{--        @csrf--}}
+        @csrf
         <div>
             <label for="todoitem">Do zrobienia</label><br>
             <input type="text" placeholder="Enter todo item" name="content">

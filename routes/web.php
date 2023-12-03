@@ -29,7 +29,7 @@ Route::prefix('todolist')->name('todoapp.')->controller(TodoAppController::class
     Route::get('/', 'index')->name('index');
     Route::post('/',  'store')->name('store');
 
-    Route::delete('/{task}', 'destroy')->name('destroy');
+    Route::delete('/{task}', 'destroy')->middleware('log.ip')->name('destroy');
     Route::put('/update/{task}', 'update')->name('update');
     Route::put('/complete/{task}', 'complete')->name('complete');
 
